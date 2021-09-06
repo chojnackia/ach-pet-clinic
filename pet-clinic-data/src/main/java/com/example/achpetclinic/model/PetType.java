@@ -1,6 +1,6 @@
 package com.example.achpetclinic.model;
 
-public class PetType {
+public class PetType extends BaseEntity{
 
     private String name;
 
