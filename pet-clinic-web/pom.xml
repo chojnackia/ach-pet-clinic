@@ -3,7 +3,7 @@
     <parent>
         <artifactId>ach-pet-clinic</artifactId>
         <groupId>com.example</groupId>
-        <version>0.04</version>
+        <version>0.05-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -22,7 +22,7 @@
         <dependency>
             <artifactId>pet-clinic-data</artifactId>
             <groupId>com.example</groupId>
-            <version>0.04</version>
+            <version>0.05-SNAPSHOT</version>
         </dependency>
 
         <dependency>
