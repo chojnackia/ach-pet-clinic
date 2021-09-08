@@ -2,9 +2,11 @@ package com.example.achpetclinic.services.map;
 
 import com.example.achpetclinic.model.Pet;
 import com.example.achpetclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
 
     @Override
