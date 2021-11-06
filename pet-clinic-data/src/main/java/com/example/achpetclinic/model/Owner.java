@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Owner extends Person {
 
-    private String adrdress;
+    private String address;
 
     private String city;
 
@@ -14,11 +14,11 @@ public class Owner extends Person {
     private Set<Pet> pets = new HashSet<>();
 
     public String getAdrdress() {
-        return adrdress;
+        return address;
     }
 
-    public void setAdrdress(String adrdress) {
-        this.adrdress = adrdress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getCity() {
