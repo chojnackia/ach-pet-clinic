@@ -1,7 +1,14 @@
 package com.example.achpetclinic.model;
 
-public class PetType extends BaseEntity{
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "TYPES")
+public class PetType extends BaseEntity {
+
+    @Column(name = "NAME")
     private String name;
 
     public String getName() {
