@@ -1,29 +1,22 @@
 package com.example.achpetclinic.bootstrap;
 
 import com.example.achpetclinic.model.*;
-import com.example.achpetclinic.services.OwnerService;
-import com.example.achpetclinic.services.PetTypeService;
-import com.example.achpetclinic.services.SpecialityService;
-import com.example.achpetclinic.services.VetService;
+import com.example.achpetclinic.services.*;
+import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
 @Component
+@AllArgsConstructor
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
-
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
-        this.ownerService = ownerService;
-        this.vetService = vetService;
-        this.petTypeService = petTypeService;
-        this.specialityService = specialityService;
-    }
+    private final VisitService visitService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -88,6 +81,12 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner2);
 
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+
+        visitService.save(catVisit);
         System.out.println("Loaded Owners...");
 
         Vet vet1 = new Vet();

@@ -2,9 +2,11 @@ package com.example.achpetclinic.services.map;
 
 import com.example.achpetclinic.model.Visit;
 import com.example.achpetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override
